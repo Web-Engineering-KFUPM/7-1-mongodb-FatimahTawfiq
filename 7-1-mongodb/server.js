@@ -222,6 +222,7 @@ async function updateStudent() {
          await Student.updateOne({ name: "Ali" }, { age: 22 });
          console.log("✅ Updated Ali");
       }
-      updateStudent();
+
+updateStudent();
 
 // delete document
