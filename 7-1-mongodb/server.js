@@ -187,7 +187,7 @@
 // import mongoose
 import mongoose from "mongoose";
 // establish connection
-mongoose.connect("mongodb+srv://Fatimah-Al-Tawfiq:Fatimah@cluster0.enrvlfq.mongodb.net/TestDB")
+mongoose.connect("mongodb://Fatimah-Al-Tawfiq:fatimah@ac-dvlzti4-shard-00-00.enrvlfq.mongodb.net:27017,ac-dvlzti4-shard-00-01.enrvlfq.mongodb.net:27017,ac-dvlzti4-shard-00-02.enrvlfq.mongodb.net:27017/TestDB?ssl=true&replicaSet=atlas-3545qi-shard-0&authSource=admin&appName=cluster0")
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log("Connection error:", err));
 
@@ -197,7 +197,7 @@ const studentSchema = new mongoose.Schema({
          age: Number,
          major: String
       });
-      const Student = mongoose.model("Student", studentSchema);
+const Student = mongoose.model("Student", studentSchema);
 
 // create document
 async function createStudents() {
@@ -230,4 +230,4 @@ async function deleteStudent() {
          await Student.deleteOne({ name: "Sara" });
       console.log("✅ Deleted Sara");
       }
-      deleteStudent();
+deleteStudent();
