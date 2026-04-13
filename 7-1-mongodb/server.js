@@ -185,9 +185,11 @@
  */
 
 // import mongoose
-
+import mongoose from "mongoose";
 // establish connection
-
+mongoose.connect("mongodb+srv://Fatimah-Al-Tawfiq:Fatimah@cluster0.enrvlfq.mongodb.net/TestDB")
+  .then(() => console.log("Connected to MongoDB"))
+  .catch(err => console.log("Connection error:", err));
 
 // define schema
 
